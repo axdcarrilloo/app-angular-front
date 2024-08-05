@@ -1,0 +1,5 @@
+
+<select class="form-select" aria-label="Default select example" [(ngModel)]="idSelectedBreed" (change)="getSelectedBreed()">
+  <option value="0" selected> Seleccione una opcion </option>
+  <option *ngFor="let breed of breeds" value="{{ breed.id }}"> {{ breed.name }} </option>
+</select>

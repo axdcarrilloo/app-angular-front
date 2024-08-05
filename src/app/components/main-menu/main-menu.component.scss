@@ -1,0 +1,19 @@
+
+$colorFondoMenu: #ebba16;
+// $tipoLetraMenu: Georgia, 'Times New Roman', Times, serif;
+$colorSeleccion: #ed8a19;
+
+.navbar {
+  background-color: $colorFondoMenu;
+  height: 40px;
+  .nav-item {
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 10px;
+      // font-family: $tipoLetraMenu;
+  }
+  .nav-item:hover {
+      background-color: $colorSeleccion;
+      transition: 0.8s;
+  }
+}

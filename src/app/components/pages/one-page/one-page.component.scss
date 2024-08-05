@@ -1,0 +1,35 @@
+
+$colorFondoMenu: #ebba16;
+
+.divSelect {
+  margin-top: 15px;
+  width: 250px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divInfo {
+  width: 70%;
+  height: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  .divInfoBreed {
+    border: 3px solid $colorFondoMenu;
+    padding: 10px;
+    border-radius: 8px;
+
+    .lbInfo {
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  img {
+    width: 40%;
+    height: 350px;
+    border-radius: 15px;
+  }
+}

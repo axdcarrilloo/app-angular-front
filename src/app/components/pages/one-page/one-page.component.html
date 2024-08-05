@@ -1,0 +1,28 @@
+
+<div class="divSelect">
+  <select-list (idBreedOut)="receiveId($event)" class="select"></select-list>
+</div>
+
+<div class="divInfo" *ngIf="validateBreedCarrusel">
+  <div class="divInfoBreed">
+    <label class="lbInfo"> Nombre: {{ breedCarrusel.name }} - </label>
+    <label class="lbInfo"> Temperamento: {{ breedCarrusel.temperament }} - </label>
+    <label class="lbInfo"> Origenes: {{ breedCarrusel.origin }} </label>
+  </div>
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div *ngFor="let picture of pictures; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+        <img [src]="picture.url" class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden"> Anterior </span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden"> Siguiente </span>
+    </button>
+  </div>
+</div>
+
