@@ -3,15 +3,21 @@ $colorFondoMenu: #ebba16;
 
 .divSelect {
   margin-top: 15px;
-  width: 250px;
+  width: 400px;
+  display: flex;
 
   margin-left: auto;
   margin-right: auto;
+
+  .btn {
+    margin-left: 10px;
+  }
 }
 
 .divInfo {
   width: 70%;
   height: 400px;
+  margin-top: 10px;
 
   margin-left: auto;
   margin-right: auto;
@@ -27,9 +33,26 @@ $colorFondoMenu: #ebba16;
     }
   }
 
-  img {
-    width: 40%;
-    height: 350px;
-    border-radius: 15px;
+  #carouselExample {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    img {
+      width: 40%;
+      height: 350px;
+      border-radius: 15px;
+    }
   }
+
+}
+
+.table {
+  width: 60%;
+  height: 200px;
+
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 3px solid $colorFondoMenu;
 }

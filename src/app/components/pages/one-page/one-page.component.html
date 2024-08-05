@@ -1,6 +1,8 @@
 
 <div class="divSelect">
   <select-list (idBreedOut)="receiveId($event)" class="select"></select-list>
+
+  <button class="btn btn-warning" (click)="cleanSelect()" [disabled]="!validateBreedCarrusel">Limpiar seleccion</button>
 </div>
 
 <div class="divInfo" *ngIf="validateBreedCarrusel">
@@ -25,4 +27,23 @@
     </button>
   </div>
 </div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id </th>
+      <th scope="col"> Nombre </th>
+      <th scope="col"> Temperamento </th>
+      <th scope="col"> Origenes </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let breed of breedsMain; let index">
+      <th>{{ breed.id }}</th>
+      <td>{{ breed.name }}</td>
+      <td>{{ breed.temperament }}</td>
+      <td>{{ breed.origin }}</td>
+    </tr>
+  </tbody>
+</table>
 

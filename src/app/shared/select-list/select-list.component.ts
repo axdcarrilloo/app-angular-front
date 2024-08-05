@@ -20,6 +20,10 @@ export class SelectListComponent implements OnInit {
     this.loadBreds();
   }
 
+  cleanSelect(): void {
+    this.idSelectedBreed = '0';
+  }
+
   private emitId(id: string):void {
     this.idBreedOut.emit(id);
   }
