@@ -1,10 +1,13 @@
 # AppAngularFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Prueba tecnica para puntos colombia
 
-## Development server
+### Requisitos para ejecucion
+  1. Node JS v20.9.0
+  2. npm 10.1.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### La App corre en
+  http://localhost:2021
 
 ## Code scaffolding
 
