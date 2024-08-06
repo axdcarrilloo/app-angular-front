@@ -3,8 +3,9 @@
 Prueba tecnica para puntos colombia
 
 ### Requisitos para ejecucion
-  1. Node JS v20.9.0
-  2. npm 10.1.0
+  1. Angular 16.2.0
+  2. Node JS v20.9.0
+  3. npm 10.1.0
 
 ### La App corre en
   http://localhost:2021
