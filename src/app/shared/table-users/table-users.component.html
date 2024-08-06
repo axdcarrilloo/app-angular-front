@@ -1,0 +1,27 @@
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Ids </th>
+        <th scope="col"> Cedulas </th>
+        <th scope="col"> Nombres </th>
+        <th scope="col"> Apellidos </th>
+        <th scope="col"> Emails </th>
+        <th scope="col"> Usuario </th>
+        <th scope="col"> Contraseñas </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersMain; let index">
+        <th>{{ user._id }}</th>
+        <td>{{ user.numberCC }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.userName }}</td>
+        <td>{{ user.password }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

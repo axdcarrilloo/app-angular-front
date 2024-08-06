@@ -9,11 +9,12 @@ import { TwoPageComponent } from './pages/two-page/two-page.component';
 import { ThreePageComponent } from './pages/three-page/three-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FourPageComponent } from './pages/four-page/four-page.component';
+import { FivePageComponent } from './pages/five-page/five-page.component';
 
 
 @NgModule({
   declarations: [
-    MainMenuComponent, OnePageComponent, TwoPageComponent, ThreePageComponent, FourPageComponent
+    MainMenuComponent, OnePageComponent, TwoPageComponent, ThreePageComponent, FourPageComponent, FivePageComponent
   ],
   imports: [
     CommonModule, SharedModule, AppRoutingModule, FormsModule, ReactiveFormsModule

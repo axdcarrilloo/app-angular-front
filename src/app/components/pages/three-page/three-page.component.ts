@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 import { UserService } from 'src/app/services/user.service';
 import { IUser } from 'src/dtos/user.dto';
@@ -13,17 +14,15 @@ import { IUser } from 'src/dtos/user.dto';
 export class ThreePageComponent implements OnInit {
   loginForm!: FormGroup;
   userMain!: IUser;
-  validateUserMain = false;
 
-  constructor(private fb: FormBuilder, private userSvc: UserService) {}
+  constructor(private fb: FormBuilder, private userSvc: UserService, private locaStorageSvc: LocalStorageService) {}
   ngOnInit(): void {
     this.loginForm = this.loadLoginForm();
   }
 
   cleanForm(): void {
     this.loginForm.reset();
-    this.userMain = { id: '', numberCC: '', name: '', lastName: '', email: '', userName: '', password: '' };
-    this.validateUserMain = false;
+    this.userMain = { _id: '', numberCC: '', name: '', lastName: '', email: '', userName: '', password: '' };
   }
 
   loadLoginForm(): FormGroup {
@@ -38,12 +37,12 @@ export class ThreePageComponent implements OnInit {
       this.userSvc.getByLogin(this.loginForm.value).subscribe({
         next: data => {
           this.userMain = data;
+          this.locaStorageSvc.uploadItem('userLogeado', this.userMain);
         },
         error: (err: HttpErrorResponse) => {
           console.error(err.error);
         }
       });
-      this.validateUserMain = true;
     }
   }
 

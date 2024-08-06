@@ -1,1 +1,26 @@
-<p>form-user works!</p>
+
+<div class="divMain">
+  <form class="formLogin" [formGroup]="userForm" (ngSubmit)="emitForm()">
+    <div class="mb-2">
+      <input type="text" formControlName="numberCC" class="form-control" placeholder="Cedula">
+    </div>
+    <div class="mb-2">
+      <input type="text" formControlName="name" class="form-control" placeholder="Nombre">
+    </div>
+    <div class="mb-2">
+      <input type="text" formControlName="lastName" class="form-control" placeholder="Apellido">
+    </div>
+    <div class="mb-2">
+      <input type="email" formControlName="email" class="form-control" placeholder="Email">
+    </div>
+    <div class="mb-2">
+      <input type="text" formControlName="userName" class="form-control" placeholder="Usuario">
+    </div>
+    <div class="mb-2">
+      <input type="password" formControlName="password" class="form-control" placeholder="Contraseña">
+    </div>
+    <div class="divButtons">
+      <button type="submit" class="btn btn-warning"> Registrar </button>
+    </div>
+  </form>
+</div>
