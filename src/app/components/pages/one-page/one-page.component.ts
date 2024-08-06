@@ -21,9 +21,7 @@ export class OnePageComponent implements OnInit {
   @ViewChild(SelectListComponent) selectListComponent!: SelectListComponent;
 
   constructor(private pictureSvc: PictureService, private breedSvc: BreedService) {}
-  ngOnInit(): void {
-    this.loadBreeds();
-  }
+  ngOnInit(): void {}
 
   cleanSelect(): void {
     this.idBreedCarrusel = '';
@@ -32,16 +30,7 @@ export class OnePageComponent implements OnInit {
     this.validateBreedCarrusel = false;
   }
 
-  private loadBreeds(): void {
-    this.breedSvc.getAll().subscribe({
-      next: data => {
-        this.breedsMain = data;
-      },
-      error: (err: HttpErrorResponse) => {
-        console.log(err.error);
-      }
-    });
-  }
+
 
   private getBreedById(id: string): void {
     this.breedSvc.getById(id).subscribe({

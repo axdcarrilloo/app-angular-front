@@ -16,7 +16,6 @@ export class SelectListComponent implements OnInit {
 
   constructor(private bredSvc: BreedService) {}
   ngOnInit(): void {
-    console.log('SelectListComponent Cargado');
     this.loadBreds();
   }
 

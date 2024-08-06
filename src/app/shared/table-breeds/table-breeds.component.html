@@ -1,0 +1,42 @@
+
+<div class="divMain">
+
+  <form *ngIf="searchs === 'Y'" class="formSearch" (ngSubmit)="buildSearch()">
+    <div class="mb-2">
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="optionSelected" [ngModelOptions]="{standalone: true}">
+        <option value="0">Seleccione una Opcion</option>
+        <option value="1"> Nombre </option>
+        <option value="2"> Temperamento </option>
+        <option value="3"> Origenes </option>
+      </select>
+    </div>
+
+    <div class="mb-2">
+      <input type="text" [(ngModel)]="fieldSearch" class="form-control" placeholder="Buscar" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit" class="btn btn-warning"> Buscar </button>
+  </form>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id </th>
+          <th scope="col"> Nombre </th>
+          <th scope="col"> Temperamento </th>
+          <th scope="col"> Origenes </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let breed of breedsMain; let index">
+          <th>{{ breed.id }}</th>
+          <td>{{ breed.name }}</td>
+          <td>{{ breed.temperament }}</td>
+          <td>{{ breed.origin }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

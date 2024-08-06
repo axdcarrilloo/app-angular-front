@@ -1,0 +1,31 @@
+
+<div class="divMain">
+  <form class="formLogin" [formGroup]="loginForm" (ngSubmit)="emitForm()">
+    <div class="mb-2">
+        <input type="text" formControlName="userName" class="form-control" placeholder="Nombre de usuario">
+    </div>
+    <div class="mb-2">
+      <input type="text" formControlName="password" class="form-control" placeholder="Contraseña">
+    </div>
+    <div class="divButtons">
+      <button type="submit" class="btn btn-warning"> Login </button>
+      <button type="submit" class="btn btn-danger" (click)="cleanForm()"> Limpiar </button>
+    </div>
+  </form>
+
+  <div class="divInfo" *ngIf="validateUserMain">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"> {{ userMain.numberCC }} </th>
+          <th scope="col"> {{ userMain.name }} </th>
+          <th scope="col"> {{ userMain.lastName }} </th>
+          <th scope="col"> {{ userMain.email }} </th>
+          <th scope="col"> {{ userMain.userName }} </th>
+          <th scope="col"> {{ userMain.password }} </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+

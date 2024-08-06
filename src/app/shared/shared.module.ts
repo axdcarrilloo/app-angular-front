@@ -5,16 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { SelectListComponent } from './select-list/select-list.component';
 import { FormsModule } from '@angular/forms';
 import { ServicesModule } from '../services/services.module';
+import { TableBreedsComponent } from './table-breeds/table-breeds.component';
+import { FormUserComponent } from './form-user/form-user.component';
 
 @NgModule({
   declarations: [
-    SelectListComponent
+    SelectListComponent, TableBreedsComponent, FormUserComponent
   ],
   imports: [
-    CommonModule, FormsModule, ServicesModule, HttpClientModule
+    CommonModule, FormsModule, ServicesModule, HttpClientModule,
   ],
   exports: [
-    SelectListComponent
+    SelectListComponent, TableBreedsComponent
   ]
 })
 export class SharedModule { }

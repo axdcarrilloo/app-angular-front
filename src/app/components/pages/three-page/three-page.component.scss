@@ -1,0 +1,23 @@
+
+$colorFondoMenu: #ebba16;
+
+.formLogin {
+  width: 250px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 5px solid $colorFondoMenu;
+  border-radius: 13px;
+
+  padding: 5px;
+
+  .divButtons {
+    margin-left: auto;
+    margin-right: auto;
+
+    .btn {
+      margin-left: 10px;
+    }
+  }
+}
